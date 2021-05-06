@@ -1,0 +1,24 @@
+<div>
+<h2>Templates:</h2>
+<ul>
+    {% for word in textset %}
+        <li>
+            <a href="/updatetext/{{word.id}}/">{{ word.text }}</a>
+        </li>
+    {% endfor %}
+</ul>
+<input value="New text template" type="button" onclick="location.href='createtext'" />
+<input value="Generate message" type="button" onclick="location.href='genermessage'" />
+</div>
+<hr>
+<div>
+<h2>Parameters:</h2>
+<ul>
+    {% for data in dataset %}
+        <li>
+            <a href="/update/{{ data.id }}/">Name: {{ data.name }}</a>
+        </li>
+    {% endfor %}
+</ul>
+<input value="New Name" type="button" onclick="location.href='create'" />
+</div>

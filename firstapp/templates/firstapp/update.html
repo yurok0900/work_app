@@ -1,0 +1,7 @@
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Update">
+    <input value="Delete" type="button" onclick="location.href='/delete/{{id}}/'" />
+    <input value="Generate one message" type="button" onclick="location.href='/{{id}}/'" />
+</form>
